@@ -35,10 +35,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 * It seems that the pre-work instructions is using an older version of Xcode.
-** `NSUserDefaults` is now `UserDefaults`
-** I used ` UserDefaults.standard` instead of `NSUserDefaults.standardUserDefaults()`
-** I used ` defaults.integer(forKey: "some_key")` instead of `defaults.integerForKey("some_key")`
-** `UIViewController` override methods are `override func viewWillAppear(_ animated: Bool)` instead of `override func viewWillAppear(animated: Bool)`
+  * `NSUserDefaults` is now `UserDefaults`
+  * I used ` UserDefaults.standard` instead of `NSUserDefaults.standardUserDefaults()`
+  * I used ` defaults.integer(forKey: "some_key")` instead of `defaults.integerForKey("some_key")`
+  * `UIViewController` override methods are `override func viewWillAppear(_ animated: Bool)` instead of `override func viewWillAppear(animated: Bool)`
 
 
 ## License
