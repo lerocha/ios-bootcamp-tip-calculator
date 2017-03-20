@@ -53,7 +53,20 @@ class ViewController: UIViewController {
         print("TipCalculator loading settings")
         let defaults = UserDefaults.standard
         tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipIndex")
+        billField.text = defaults.string(forKey: "billAmount")
         calcualteTip()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("Settings saving...")
+        let defaults = UserDefaults.standard
+        defaults.set(billField.text, forKey: "billAmount")
     }
 }
 
