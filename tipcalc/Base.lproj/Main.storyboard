@@ -86,7 +86,13 @@
                             <outletCollection property="gestureRecognizers" destination="ZQX-jf-UTf" appends="YES" id="z1p-9i-smy"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="hDe-Rl-QxQ"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="hDe-Rl-QxQ">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="EcW-7v-PW7">
+                            <connections>
+                                <segue destination="21D-EK-wk0" kind="push" id="n8I-C8-bon"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="FcU-Wa-ze8" id="kp7-yw-YVv"/>
                         <outlet property="tipControl" destination="Er4-Nj-Q6y" id="QM2-eZ-thR"/>
@@ -102,6 +108,57 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="607.5" y="41.5"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="L7a-rc-Jl2">
+            <objects>
+                <viewController id="21D-EK-wk0" customClass="SettingsViewController" customModule="tipcalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8a-lL-i3y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="w9Y-G1-ikO">
+                                <rect key="frame" x="16" y="172" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fgj-Rq-Em4">
+                                <rect key="frame" x="16" y="135" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Currency Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LQK-BB-HjB">
+                                <rect key="frame" x="16" y="236" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9oa-is-yON">
+                                <rect key="frame" x="217" y="232" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Usg-NH-fRc"/>
+                    <connections>
+                        <outlet property="currencySymbolField" destination="9oa-is-yON" id="89G-qF-vjs"/>
+                        <outlet property="defaultTipControl" destination="w9Y-G1-ikO" id="0Ti-C7-nEH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45O-c0-aqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048.5" y="47.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vJ7-UW-Spm">

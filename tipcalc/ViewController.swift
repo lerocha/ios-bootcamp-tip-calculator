@@ -29,17 +29,31 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func onBillChange(_ sender: Any) {
+    func calcualteTip() {
         let tipPercentages = [0.18, 0.20, 0.25]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        let defaults = UserDefaults.standard
+        let symbol = defaults.string(forKey: "currencySymbol") ?? "$"
+        tipLabel.text = String(format: "%@%.2f", symbol, tip)
+        totalLabel.text = String(format: "%@%.2f", symbol, total)
+    }
+    
+    @IBAction func onBillChange(_ sender: Any) {
+        calcualteTip()
     }
     
     @IBAction func onTipChange(_ sender: Any) {
-        return onBillChange(Any.self)
+        calcualteTip()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("TipCalculator loading settings")
+        let defaults = UserDefaults.standard
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipIndex")
+        calcualteTip()
     }
 }
 

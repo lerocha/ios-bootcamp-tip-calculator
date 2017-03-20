@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60440E471E7F983000766367 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60440E461E7F983000766367 /* SettingsViewController.swift */; };
 		6079FE371E7F7340001FE54A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079FE361E7F7340001FE54A /* AppDelegate.swift */; };
 		6079FE391E7F7340001FE54A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079FE381E7F7340001FE54A /* ViewController.swift */; };
 		6079FE3C1E7F7340001FE54A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6079FE3A1E7F7340001FE54A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60440E461E7F983000766367 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6079FE331E7F7340001FE54A /* tipcalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipcalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079FE361E7F7340001FE54A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6079FE381E7F7340001FE54A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		6079FE2A1E7F733F001FE54A = {
 			isa = PBXGroup;
 			children = (
+				60440E461E7F983000766367 /* SettingsViewController.swift */,
 				6079FE351E7F7340001FE54A /* tipcalc */,
 				6079FE4A1E7F7340001FE54A /* tipcalcTests */,
 				6079FE551E7F7340001FE54A /* tipcalcUITests */,
@@ -261,6 +264,7 @@
 			files = (
 				6079FE391E7F7340001FE54A /* ViewController.swift in Sources */,
 				6079FE371E7F7340001FE54A /* AppDelegate.swift in Sources */,
+				60440E471E7F983000766367 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				6079FE5D1E7F7340001FE54A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6079FE5E1E7F7340001FE54A /* Build configuration list for PBXNativeTarget "tipcalcTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				6079FE601E7F7340001FE54A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6079FE611E7F7340001FE54A /* Build configuration list for PBXNativeTarget "tipcalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				6079FE631E7F7340001FE54A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
